@@ -26,8 +26,11 @@ foreach ($lines as $line) {
     $out[$id] = [$red, $green, $blue];
 }
 
-$max_red = 12;
-$max_green = 13;
-$max_blue = 14;
-$out = array_filter($out, fn($t) => $t[0] <= $max_red and $t[1] <= $max_green and $t[2] <= $max_blue);
-echo array_sum(array_keys($out));
+// $max_red = 12;
+// $max_green = 13;
+// $max_blue = 14;
+// $out = array_filter($out, fn($t) => $t[0] <= $max_red and $t[1] <= $max_green and $t[2] <= $max_blue);
+// echo array_sum(array_keys($out));
+
+// 2B neat, I can reuse the $out
+echo array_sum(array_map('array_product', $out));
