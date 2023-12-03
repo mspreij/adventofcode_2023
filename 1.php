@@ -1,4 +1,3 @@
-#!/usr/bin/env php
 <?php
 
 $lines = file('1.txt', FILE_IGNORE_NEW_LINES);
